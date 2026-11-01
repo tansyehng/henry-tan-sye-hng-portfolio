@@ -19,7 +19,7 @@ body{font-size:17px}
 .tag-list span,.dialog-stack span{font:11px var(--mono);padding:6px 10px}
 .impact{font:12px var(--mono)}
 .about-copy h2{font-size:clamp(42px,4.8vw,62px)}
-.about-card-label,.about-card-foot span:first-child{font-size:11px}
+.about-card-label,.about-card-foot span:first-child{font-size:12px}
 .scholar-badge span{font-size:11px}
 .scholar-badge b{font-size:13px}
 .underlined-link{font-size:15px;color:#4c554e}
@@ -81,7 +81,7 @@ body{font-size:17px}
  .about-card>b{font-size:34px}
  .award-photo{width:137px;height:177px;right:0;bottom:3%;padding:6px 6px 0}
  .award-photo img{height:139px;object-position:69% 42%}
- .award-photo figcaption{font-size:8px;padding:7px 0}
+ .award-photo figcaption{font-size:10px;padding:7px 0}
  .toolbox-col p{font-size:13px;line-height:1.75}
  .toolbox-index{font-size:11px}
  .timeline-date{font-size:10px;line-height:1.55}
