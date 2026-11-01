@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -74,9 +74,14 @@
         <div class="project-grid">
           <article class="project-card project-blue reveal" data-project="converter">
             <div class="project-visual converter-visual" aria-hidden="true">
-              <div class="paper paper-one"><i></i><i></i><i></i><i></i><b>PDF</b></div><div class="convert-arrow">→</div>
-              <div class="sheet-card"><div class="sheet-top"><span>Transactions</span><span>•••</span></div><div class="sheet-row sheet-head"><i>Date</i><i>Description</i><i>Amount</i></div><div class="sheet-row"><i>01/06/26</i><i>Office supplies</i><i>−240.00</i></div><div class="sheet-row"><i>03/06/26</i><i>Client payment</i><i>+4,800.00</i></div><div class="sheet-row"><i>04/06/26</i><i>Utilities</i><i>−180.00</i></div><div class="export-pill">✓ &nbsp;Ready for Odoo</div></div>
-              <span class="visual-tag">PDF → LEDGER</span>
+              <div class="converter-preview">
+                <div class="converter-topline"><b>∞ CONZLAB</b><span>Sign in &nbsp; EN</span></div>
+                <div class="converter-steps"><span>01&nbsp; Upload</span><span>02&nbsp; Extract</span><span>03&nbsp; Analyze</span><span>04&nbsp; Export</span></div>
+                <div class="converter-core">
+                  <div class="converter-copy"><span class="converter-accuracy">✦ AI-powered · 99.9% field accuracy</span><h4>The Free Bank Statement Converter for Malaysia</h4><p>PDF statements from Maybank, CIMB, Public Bank, RHB and more — to Excel or AutoCount.</p><div class="converter-cta">Upload a statement &nbsp;→</div><small>★★★★★ &nbsp; 4.7/5 · 15,082 reviews</small></div>
+                  <div class="bank-panel"><span class="bank-panel-label">BANK STATEMENTS</span><div class="bank-row"><b>Maybank</b><span>Current Account · March statement</span><em>PDF</em></div><div class="bank-row"><b>CIMB Bank</b><span>Business Account · CIMB Berhad</span><em>PDF</em></div><div class="bank-row"><b>Public Bank</b><span>Savings</span><em>PDF</em></div><div class="bank-results"><b>247</b> transactions <span>RM 48,920 processed</span></div></div>
+                </div>
+              </div>
             </div>
             <div class="project-meta"><span>01 / FINTECH · AUTOMATION</span><button class="open-project" aria-label="View Bank Statement Converter case study" data-open="converter">↗</button></div>
             <h3>Bank Statement<br />Converter</h3><p>From bank PDF to structured, accounting-ready data in seconds.</p>
@@ -84,14 +89,22 @@
           </article>
 
           <article class="project-card project-yellow reveal" data-project="tenancy">
-            <div class="project-visual tenancy-visual" aria-hidden="true"><div class="receipt-card"><div class="receipt-brand"><span>HOME / MATH</span><b>⌂</b></div><h4>Your move-in<br />estimate</h4><div class="receipt-line"><span>Monthly rent</span><b>RM 2,000</b></div><div class="receipt-line"><span>Stamp duty</span><b>RM 72</b></div><div class="receipt-line"><span>Legal fees</span><b>RM 500</b></div><div class="receipt-dashed"></div><div class="receipt-total"><span>ESTIMATED TOTAL</span><b>RM 6,572</b></div><div class="receipt-share">↗ &nbsp; Share breakdown</div></div><div class="sunburst">RM<br /><small>✓</small></div><span class="visual-tag">ILLUSTRATIVE ESTIMATE</span></div>
+            <div class="project-visual tenancy-visual" aria-hidden="true">
+              <div class="tenancy-preview">
+                <div class="tenancy-topline"><b>∞ CONZLAB</b><span>EN &nbsp; 中文</span></div>
+                <div class="tenancy-heading"><span>✦ Updated for 2026 LHDN stamp duty rules</span><h4>Malaysia Tenancy Agreement Calculator</h4><p>Estimate stamp duty, legal fees &amp; deposits, then share the breakdown on WhatsApp.</p></div>
+                <div class="tenancy-panels"><div class="tenancy-input-panel"><b>Your Tenancy Details</b><span>Monthly Rental</span><strong>RM&nbsp; 1,500</strong><span>Tenancy Period</span><strong>2 years</strong><span>Duplicate Copies</span><strong>1</strong></div><div class="tenancy-result-panel"><b>Cost Breakdown</b><span>Annual rent</span><strong>RM 18,000</strong><span>Stamp duty</span><strong>RM 216</strong><span>Duplicate copies</span><strong>RM 10</strong><div class="tenancy-total"><span>ESTIMATED TOTAL UPFRONT COST</span><b>RM 226.00</b></div></div></div>
+              </div>
+            </div>
             <div class="project-meta"><span>02 / WEB · FINANCIAL TOOLS</span><button class="open-project" aria-label="View Tenancy Agreement Calculator case study" data-open="tenancy">↗</button></div>
             <h3>Tenancy Agreement<br />Calculator</h3><p>A live cost breakdown that makes the move-in math easier to understand.</p>
             <div class="project-bottom"><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><span class="impact">Instant estimates</span></div>
           </article>
 
           <article class="project-card project-lime reveal" data-project="huna">
-            <div class="project-visual huna-visual" aria-hidden="true"><div class="maid-search"><div class="search-top"><span>find someone wonderful</span><b>☰</b></div><div class="search-label">MATCH BY WHAT MATTERS</div><div class="filter-pills"><span>Childcare <b>×</b></span><span>Malaysia exp. <b>×</b></span><span>+ Add filter</span></div><div class="maid-results"><div class="maid-mini"><div class="maid-avatar avatar-a">S</div><div><b>Candidate 01</b><small>4 yrs · Childcare</small></div><span>↗</span></div><div class="maid-mini"><div class="maid-avatar avatar-b">M</div><div><b>Candidate 02</b><small>8 yrs · Elder care</small></div><span>↗</span></div></div></div><div class="cms-stamp"><span>MANAGER<br />EDITABLE</span><b>✳</b></div><span class="visual-tag">PUBLIC PORTAL + PRIVATE CMS</span></div>
+            <div class="project-visual huna-visual" aria-hidden="true">
+              <div class="huna-preview"><div class="huna-site-top"><b>HUNA<br/><small>EMPLOYMENT</small></b><span>● &nbsp; WhatsApp Us</span></div><div class="huna-hero-preview"><div class="huna-main-copy"><span class="huna-verified">● &nbsp; 100% Verified Helper Profiles</span><small>FIND MAID — BIO SEARCH</small><h4>Available helper profiles</h4><p>Filter by age, religion, marital status, experience and caregiving skills.</p><div class="huna-trust">✓ Identity Verified &nbsp; · &nbsp; Video Interview &nbsp; · &nbsp; Skill Certified</div></div><div class="huna-match-panel"><div class="match-line"><b>+1k</b><strong>Trusted Household Match</strong><span>98%<small>Match Rate</small></span></div><small>POPULAR SEARCH FILTERS:</small><div class="huna-filter-pills"><span>Elder Care / 护理长者</span><span>Infant Care / 照顾婴儿</span><span>Cooking / 烹饪家务</span><span>Ex-Singapore / 新加坡经验</span></div></div></div><div class="huna-result-count"><b>12</b> helper(s) match your filters</div></div>
+            </div>
             <div class="project-meta"><span>03 / PRODUCT · CUSTOM CMS</span><button class="open-project" aria-label="View Huna Find-a-Maid case study" data-open="huna">↗</button></div>
             <h3>Find-a-Maid Portal<br /><span class="plus-title">+ Manager Tool</span></h3><p>Helping families find a match — and giving managers the keys to keep profiles current.</p>
             <div class="project-bottom"><div class="tag-list"><span>JavaScript</span><span>Python</span><span>Node.js</span></div><span class="impact">No-code content updates</span></div>
