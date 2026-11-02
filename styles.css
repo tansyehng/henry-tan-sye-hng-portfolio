@@ -191,3 +191,6 @@ body{font-size:17px}
 .project-image-link--tenancy:hover img,.project-image-link--tenancy:focus-visible img{transform:scale(1.035)}
 .project-visual.screenshot-visual{padding-top:12px}
 @media(max-width:760px){.project-visual.screenshot-visual{padding-top:10px}}
+
+.project-visual.screenshot-visual{background:transparent}
+
