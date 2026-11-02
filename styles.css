@@ -187,3 +187,5 @@ body{font-size:17px}
 @media(max-width:420px){.image-visit{font-size:11px;padding:7px 10px}}
 .project-visual.screenshot-visual:has(.project-image-link--salary){aspect-ratio:2.2/1}
 @media(max-width:760px){.project-visual.screenshot-visual:has(.project-image-link--salary){aspect-ratio:2.2/1}}
+.project-image-link--tenancy img{transform:scale(1)}
+.project-image-link--tenancy:hover img,.project-image-link--tenancy:focus-visible img{transform:scale(1.035)}
