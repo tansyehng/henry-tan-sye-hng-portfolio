@@ -194,3 +194,7 @@ body{font-size:17px}
 
 .project-visual.screenshot-visual{background:transparent}
 
+
+.project-visual.screenshot-visual{padding-top:12px;padding-bottom:12px;background:transparent}
+@media(max-width:760px){.project-visual.screenshot-visual{padding-top:10px;padding-bottom:10px}}
+
