@@ -1,1 +1,122 @@
-const projects={converter:{number:"PROJECT / 01",title:"Bank Statement Converter",lede:"A practical PDF-to-data tool built around a real accounting workflow.",challenge:"Bank transactions needed to be copied and checked line by line from multi-page PDF statements before they could be used for reconciliation.",build:"A web interface backed by Python and Flask that extracts statement data from supported Malaysian banks and exports structured CSV or Excel files ready for Odoo. Packaged with Docker and deployed on a Hostinger VPS.",outcome:"Reduced manual statement-entry and checking time by more than 80%. The tool is used in Conzlab Berhad’s day-to-day accounting and reconciliation workflow.",stack:["HTML","CSS","JavaScript","Python","Flask","Docker"],url:"https://www.conzlab.com/bank-statement-converter"},tenancy:{number:"PROJECT / 02",title:"Tenancy Agreement Calculator",lede:"An instant cost estimate for Malaysia rental agreements.",challenge:"Tenants and landlords have to account for several charges when preparing an agreement, and the total is not always easy to estimate.",build:"A responsive calculator that combines rental information with Malaysia stamp-duty and legal-fee rules to show an itemized estimate and total.",outcome:"Makes the expected cost easier to understand before proceeding. This tool is a calculator, not legal advice.",stack:["HTML","CSS","JavaScript"],url:"https://www.conzlab.com/tenancy-agreement-calculator"},huna:{number:"PROJECT / 03",title:"Huna Find-a-Maid + Manager Tool",lede:"A searchable customer portal paired with a custom content manager.",challenge:"Families need a simple way to browse available profiles, while the owner needs a reliable way to keep profile details and availability up to date.",build:"Built the public search and filtering experience, connected profile data, and created a private manager tool for adding, updating, and removing profiles and statuses without editing code.",outcome:"Lets the business owner maintain the listings directly, removing recurring developer-led data updates.",stack:["HTML","CSS","JavaScript","Python","Node.js","Database integration"],url:"https://huna-employment.com/find-a-maid"},payment:{number:"PROJECT / 04",title:"Maid Payment Calculator",lede:"A transparent breakdown of maid-service costs and payment stages.",challenge:"Customers need to understand service fees, initial payment, salary, and deductions before making a decision.",build:"A responsive calculator that organizes the charges into an easy-to-follow breakdown, including service fees, upfront payment, monthly salary, and deductions.",outcome:"Gives customers a clearer view of the expected costs and makes the pricing conversation easier.",stack:["HTML","CSS","JavaScript"],url:"https://huna-employment.com/maid-payment-calculator"}};const menuButton=document.querySelector(".menu-toggle");const nav=document.querySelector(".nav-links");menuButton?.addEventListener("click",()=>{const open=menuButton.getAttribute("aria-expanded")!=="true";menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Close navigation":"Open navigation");nav?.classList.toggle("is-open",open)});nav?.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{menuButton?.setAttribute("aria-expanded","false");menuButton?.setAttribute("aria-label","Open navigation");nav.classList.remove("is-open")}));const dialog=document.querySelector(".case-dialog");const closeButton=document.querySelector(".dialog-close");document.querySelectorAll("[data-open]").forEach(button=>button.addEventListener("click",()=>{const project=projects[button.dataset.open];if(!project||!dialog)return;document.querySelector("#dialog-kicker").textContent=project.number;document.querySelector("#dialog-title").textContent=project.title;document.querySelector("#dialog-lede").textContent=project.lede;document.querySelector("#dialog-challenge").textContent=project.challenge;document.querySelector("#dialog-build").textContent=project.build;document.querySelector("#dialog-outcome").textContent=project.outcome;const stack=document.querySelector("#dialog-stack");stack.replaceChildren(...project.stack.map(item=>{const tag=document.createElement("span");tag.textContent=item;return tag}));const projectLink=document.querySelector("#dialog-link");projectLink.href=project.url;dialog.showModal()}));closeButton?.addEventListener("click",()=>dialog?.close());dialog?.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});const revealItems=document.querySelectorAll(".reveal");if("IntersectionObserver"in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(item=>observer.observe(item))}else revealItems.forEach(item=>item.classList.add("is-visible"));document.querySelectorAll("a[href^=\"#\"]").forEach(link=>link.addEventListener("click",event=>{const target=document.querySelector(link.getAttribute("href"));if(target){event.preventDefault();target.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});history.replaceState(null,"",link.getAttribute("href"))}}));
+const projects = {
+  converter: {
+    number: "PROJECT / 01 — CONZLAB",
+    title: "Bank Statement Converter",
+    lede: "I built a document-to-ledger workflow that turns Malaysian bank statements into structured data ready for accounting.",
+    challenge: "Accountants had to manually transcribe and check transaction rows from multi-page PDF statements before reconciliation.",
+    build: "A Python and Flask parsing service packaged with Docker, paired with a straightforward upload and export interface. It supports major Malaysian banks and produces structured files for accounting workflows, including Odoo.",
+    outcome: "Reduced manual transcription time by more than 80%. The tool is now used in Conzlab’s day-to-day accounting and reconciliation process.",
+    stack: ["Python", "Flask", "Docker", "PDF parsing", "Hostinger VPS"],
+    link: "https://www.conzlab.com/bank-statement-converter"
+  },
+  tenancy: {
+    number: "PROJECT / 02 — CONZLAB",
+    title: "Tenancy Agreement Calculator",
+    lede: "A clear, interactive estimate of the costs involved in a Malaysian tenancy agreement.",
+    challenge: "Renters often need to piece together stamp duty, legal fees, service charges, deposits, and advance rental to understand their upfront costs.",
+    build: "A responsive calculator with live results, adjustable inputs, a detailed fee breakdown, and an option to share the estimate through WhatsApp.",
+    outcome: "A single page brings the estimate and its assumptions together so users can understand and adjust the numbers before making plans.",
+    stack: ["HTML", "CSS", "JavaScript", "Responsive UI"],
+    link: "https://www.conzlab.com/tenancy-agreement-calculator"
+  },
+  huna: {
+    number: "PROJECT / 03 — HUNA EMPLOYMENT",
+    title: "Find-a-Maid Portal + Manager Tool",
+    lede: "A customer-facing search experience connected to a private content manager for the agency team.",
+    challenge: "Families needed a practical way to find candidates by age, experience, and care skills. Keeping live profiles updated also meant repeated developer involvement.",
+    build: "A searchable and filterable profile portal, supported by data integration and a custom manager CMS where the owner can add, update, or remove profiles and availability without writing code.",
+    outcome: "Non-technical staff can maintain the live profile data themselves, removing repetitive developer updates from routine operations.",
+    stack: ["JavaScript", "Python", "Node.js", "Web scraping", "Database integration", "Custom CMS"],
+    link: "https://huna-employment.com/find-a-maid"
+  },
+  payment: {
+    number: "PROJECT / 04 — HUNA EMPLOYMENT",
+    title: "Maid Payment Calculator",
+    lede: "A simple pricing breakdown that helps customers understand the costs of hiring domestic help.",
+    challenge: "Service fees, upfront payments, monthly salary, and deductions can be hard to compare when spread across separate explanations.",
+    build: "A mobile-friendly calculator interface that organizes the inputs and presents an itemized estimate of service costs and payment details.",
+    outcome: "Customers can see a transparent fee breakdown in one place, supporting clearer conversations with the agency.",
+    stack: ["HTML", "CSS", "JavaScript", "Responsive UI"],
+    link: "https://huna-employment.com/maid-payment-calculator"
+  },
+  rfid: {
+    number: "LAB PROJECT / 01 — EMBEDDED SYSTEMS",
+    title: "RFID Smart Door Lock",
+    lede: "An ESP32-based access control prototype that connects RFID card reading with a physical door lock.",
+    challenge: "Explore how a microcontroller and RFID reader can make a physical access workflow responsive to a presented card.",
+    build: "The ESP32 handles the project logic, RFID provides the card-based input, and the lock mechanism performs the physical action. The Telegram Bot API is part of the connected project stack.",
+    outcome: "A hands-on embedded project combining hardware, access control logic, and connected software in one prototype.",
+    stack: ["ESP32", "RFID", "Telegram Bot API"]
+  },
+  attendance: {
+    number: "LAB PROJECT / 02 — WEB APPLICATION",
+    title: "Smart Attendance Website",
+    lede: "A browser-based attendance system built with HTML, CSS, JavaScript, and MySQL.",
+    challenge: "Attendance records need a consistent place to be captured and managed over time.",
+    build: "The web interface is built with HTML, CSS, and JavaScript, with MySQL supporting the attendance data behind the application.",
+    outcome: "A focused web application that brings attendance capture and record management together in one place.",
+    stack: ["HTML", "CSS", "JavaScript", "MySQL"]
+  }
+};
+
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".nav-links");
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") !== "true";
+  menuButton.setAttribute("aria-expanded", String(open));
+  navigation.classList.toggle("is-open", open);
+  menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+});
+navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  navigation.classList.remove("is-open");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open navigation");
+}));
+
+const dialog = document.querySelector(".case-dialog");
+function showProject(key) {
+  const project = projects[key];
+  if (!project) return;
+  document.querySelector("#dialog-kicker").textContent = project.number;
+  document.querySelector("#dialog-title").textContent = project.title;
+  document.querySelector("#dialog-lede").textContent = project.lede;
+  document.querySelector("#dialog-challenge").textContent = project.challenge;
+  document.querySelector("#dialog-build").textContent = project.build;
+  document.querySelector("#dialog-outcome").textContent = project.outcome;
+  document.querySelector("#dialog-stack").replaceChildren(...project.stack.map((item) => {
+    const tag = document.createElement("span");
+    tag.textContent = item;
+    return tag;
+  }));
+  const link = document.querySelector("#dialog-link");
+  if (project.link) {
+    link.href = project.link;
+    link.hidden = false;
+  } else {
+    link.hidden = true;
+  }
+  dialog.showModal();
+}
+document.querySelectorAll("[data-open]").forEach((button) => button.addEventListener("click", () => showProject(button.dataset.open)));
+document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) dialog.close();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && dialog.open) dialog.close();
+});
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14 });
+document.querySelectorAll(".reveal").forEach((item, index) => {
+  item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+  revealObserver.observe(item);
+});
+
+
