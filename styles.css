@@ -317,3 +317,5 @@ body{font-size:17px}
 .side-arrow:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translate(2px,-2px)}
 .side-arrow:focus-visible{outline:3px solid #547fbd;outline-offset:3px}
 
+.dialog-link[hidden]{display:none}
+
