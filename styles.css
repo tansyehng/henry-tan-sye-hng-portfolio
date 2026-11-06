@@ -303,3 +303,14 @@ body{font-size:17px}
 }
 @media(prefers-reduced-motion:reduce){.project-card,.project-card:hover,.open-project{transition:none;transform:none}}
 
+
+/* More context for the embedded and attendance projects. */
+.side-project{align-items:flex-start;gap:14px;padding:22px 18px;}
+.side-project>div{min-width:0;flex:1;}
+.side-project h4{font-size:16px;margin:2px 0 8px;}
+.side-project .side-project-detail{margin:0 0 10px;color:#555e57;font:13px/1.55 var(--body);}
+.side-project .side-project-tech{margin:0;color:#737a73;font:10px/1.5 var(--mono);}
+.side-arrow{width:32px;height:32px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fffefa;border:1px solid var(--line);color:#525d55;}
+@media(max-width:900px){.side-project-strip{grid-template-columns:1fr 1fr}.side-project-intro{grid-column:1/-1;padding:20px 0}.side-project:nth-child(2){border-left:0;padding-left:0}}
+@media(max-width:680px){.side-project-strip{grid-template-columns:1fr}.side-project-intro{grid-column:auto}.side-project{padding:16px 0}.side-project:nth-child(2){padding-right:0;border-top:1px solid var(--line)}.side-project h4{font-size:15px}.side-project .side-project-detail{font-size:13px}.side-project .side-project-tech{font-size:10px}}
+
